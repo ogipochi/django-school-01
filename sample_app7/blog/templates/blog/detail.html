@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 blog-main">
+            <div class="blog-post-title">
+                {{article.title}}
+            </div>
+            <div class="blog-post-meta">
+                {{article.tag}}
+                {{article.created}}
+                {{article.edited}}
+                {{article.author.username}}
+            </div>
+            <div>
+                {{article.body}}
+            </div>
+            <a href="{% url 'blog:list' %}">記事一覧に戻る</a>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>サンプルページ</title>
+    </head>
+    <body>
+        <div>
+            {% for article in articles %}
+            {{article.id}}<br>
+            {{article.title}}<br>
+            {{article.tag}}<br>
+            {{article.author.username}}<br>
+            {{article.top_image}}<br>
+            {{article.body|truncatechars:9 }}<br>
+            {{article.created}}<br>
+            {{article.updated}}<br>
+            {{article.status | title}}
+            <br>
+            {% endfor %}
+        </div>
+    </body>
+</html>

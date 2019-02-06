@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+            {% for article in articles %}
+            <div class="card" style="width:18rem">
+            <div class="card-body">
+            <div class="card-title">{{article.title}}</div>
+            <div class="badge badge-secondary">{{article.tag}}</div>
+            {{article.author.username}}<br>
+            {{article.created}}<br>
+            <div class="card-text">{{article.body|truncatechars:10 }}</div>
+            
+            <a href="{{article.get_absolute_url}}" class="card-link">詳細へ</a>
+            </div>
+        </div>
+            {% endfor %}
+{% endblock %}
