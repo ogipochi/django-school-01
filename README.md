@@ -1,8 +1,9 @@
-# 実行の仕方
+# 試し方
 
-それぞれのディレクトリ(`sample_app<num>`)に入りrequirements.txtでpythonのパッケージをインストールします
+自分の試したいディレクトリ(`sample_app<num>`)に入りrequirements.txtでpythonのパッケージをインストールします
 
 ```
+$ cd sample_app<num>
 $ pip install -r requirements.txt
 ```
 
